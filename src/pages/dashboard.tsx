@@ -59,7 +59,7 @@ const options: ApexOptions = {
   theme: {
     monochrome: {
       enabled: true,
-      color: theme.colors.pink[500],
+      color: theme.colors.purple[500],
       shadeTo: 'light',
       shadeIntensity: 0.65
     }

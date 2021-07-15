@@ -22,7 +22,7 @@ export default function UserList() {
               as="a"
               size="sm"
               fontSize="sm"
-              colorScheme="pink"
+              colorScheme="purple"
               leftIcon={<Icon as={RiAddLine} fontSize="18"/>}
             >
               Criar novo usuário
@@ -33,7 +33,7 @@ export default function UserList() {
             <Thead>
               <Tr>
                 <Th px="6" color="gray.300" width="8">
-                  <Checkbox colorScheme="pink"/>
+                  <Checkbox colorScheme="purple"/>
                 </Th>
                 <Th>Usuários</Th>
                 <Th>Data de cadastro</Th>
@@ -45,7 +45,7 @@ export default function UserList() {
               {listTable.map(table => (
                 <Tr key={table[0]}>
                   <Td px="6">
-                    <Checkbox colorScheme="pink"/>
+                    <Checkbox colorScheme="purple"/>
                   </Td>
                   <Td>
                     <Box>

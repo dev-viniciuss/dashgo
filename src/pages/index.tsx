@@ -31,7 +31,7 @@ export default function SignIn() {
             />
           </Stack>
 
-          <Button type="submit" mt="6" colorScheme="pink" size="lg">Entrar</Button>          
+          <Button type="submit" mt="6" colorScheme="purple" size="lg">Entrar</Button>          
         </Flex>
       </Flex>
     </>
