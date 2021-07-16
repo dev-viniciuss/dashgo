@@ -44,7 +44,7 @@ export default function UserList() {
 
             <Tbody>
               {listTable.map(table => (
-                <Tr key={table[0]}>
+                <Tr key={table}>
                   <Td px="6">
                     <Checkbox colorScheme="purple"/>
                   </Td>
