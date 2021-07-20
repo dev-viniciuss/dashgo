@@ -4,8 +4,8 @@ import { PaginationItem } from "./PaginationItem"
 
 export function Pagination() {
   return(
-    <Stack direction={["column", "row"]} spacing="6" mt="8" justifyContent="center" aling="center">
-      <Box mt={["0", "1"]} mx="auto">
+    <Stack direction={["column", "row"]} spacing="6" mt="8" justifyContent="space-between" aling="center">
+      <Box mt={["0", "1"]} mx={["auto", "0"]} >
         <strong>0</strong> - <strong>10</strong> de <strong>100</strong>
       </Box>
 

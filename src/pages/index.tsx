@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { Flex, Stack, Button } from '@chakra-ui/react'
 
@@ -13,7 +14,7 @@ export default function SignIn() {
       </Head>
       
       <Flex w="100vw" h="100vh" align="center" justify="center" flexDirection="column">
-        <Logo fontSize="4xl" fontWeight="bold" letterSpacing="tight" mb="6"/>
+        <Logo as="span" href="/" fontSize="4xl" fontWeight="bold" letterSpacing="tight" mb="6"/>
 
         <Flex as="form" width="100%" maxW={360} bg="gray.800" p="8" borderRadius={8} flexDir="column">
           <Stack spacing="4">
@@ -31,7 +32,9 @@ export default function SignIn() {
             />
           </Stack>
 
-          <Button type="submit" mt="6" colorScheme="purple" size="lg">Entrar</Button>          
+          <Link href="/dashboard" passHref>
+            <Button type="submit" mt="6" colorScheme="purple" size="lg">Entrar</Button>          
+          </Link>
         </Flex>
       </Flex>
     </>

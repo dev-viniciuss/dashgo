@@ -37,7 +37,7 @@ export function Header() {
         />
       )}
 
-      <Logo fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="64" />
+      <Logo href="/dashboard" fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="64" />
 
       { isWideVersion && <Search />}
       
