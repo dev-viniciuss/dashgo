@@ -23,7 +23,7 @@ export function Header() {
       w="100%" h="20" 
       maxW={1480} 
       mx="auto" mt="4"
-      px="6" 
+      px={["2" ,"6"]} 
       align="center"
     >
       { !isWideVersion && (
