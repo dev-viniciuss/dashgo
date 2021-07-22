@@ -8,7 +8,7 @@ export function Profile({ showProfileData }: ProfileProps) {
   return(
     <Flex align="center">
       { showProfileData && (
-        <Box mr="4" textAling="right">
+        <Box mr="4" textAlign="right">
           <Text>Marcus Vinicius</Text>
           <Text color="gray.300" fontSize="small">
             dev.mvsc@gmail.com
