@@ -12,7 +12,7 @@ import { Input } from '../components/Form/Input'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 interface SignInFormData {
-  emal: string;
+  email: string;
   password: string;
 }
 
@@ -64,7 +64,7 @@ export default function SignIn() {
             />
           </Stack>
 
-          
+          <Link href="/dashboard" passHref>
             <Button 
               type="submit" 
               mt="6" 
@@ -74,7 +74,8 @@ export default function SignIn() {
             >
               Entrar
             </Button>          
-         
+          </Link>
+
         </Flex>
       </Flex>
     </>
