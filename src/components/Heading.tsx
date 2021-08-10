@@ -1,8 +1,9 @@
 import { Heading as ChakraHeading, HeadingProps as ChakraHeadingProps } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
 interface HeadingProps extends ChakraHeadingProps {
   size: string;
-  children: string;
+  children: ReactNode;
 }
 
 export function Heading({ size, children }: HeadingProps) {
