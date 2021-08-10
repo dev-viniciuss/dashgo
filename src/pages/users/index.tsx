@@ -17,10 +17,22 @@ export default function UserList() {
     const response = await fetch('http://localhost:3000/api/users')
     const data =  await response.json()
     
-    return data
-  })
+    const users = data.users.map(user => {
+      return {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        })
+      }
 
-  const listTable = [1, 2, 3]
+    })
+
+    return users
+  })
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -78,18 +90,18 @@ export default function UserList() {
                   </Thead>
 
                   <Tbody>
-                    {listTable.map(table => (
-                      <Tr key={table}>
+                    {data.map(user => (
+                      <Tr key={user.id}>
                         <Td px="6">
                           <Checkbox colorScheme="purple"/>
                         </Td>
                         <Td>
                           <Box>
-                            <Text fontWeight="bold">Marcus Vinicius</Text>
-                            <Text fontSize="sm" color="gray.300">dev.mvsc@gmail.com</Text>
+                            <Text fontWeight="bold">{user.name}</Text>
+                            <Text fontSize="sm" color="gray.300">{user.email}</Text>
                           </Box>
                         </Td>
-                        {isWideVersion && <Td>15 de Junho, 2021</Td>}
+                        {isWideVersion && <Td>{user.createdAt}</Td>}
                         {isWideVersion &&
                           <Td>
                             <Button
