@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import { useQuery } from 'react-query'
 
+import { api } from '../../services/api'
+
 import { Box, Flex, Button, Icon, Table, Thead, Tr, Th, Checkbox, Tbody, Td, Text, useBreakpointValue, Spinner } from '@chakra-ui/react'
 
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
@@ -14,9 +16,8 @@ import { Pagination } from '../../components/Pagination'
 
 export default function UserList() {
   const { data, isLoading, error, isFetching } = useQuery('users', async () => {
-    const response = await fetch('http://localhost:3000/api/users')
-    const data =  await response.json()
-    
+    const { data } = await api('/users')
+        
     const users = data.users.map(user => {
       return {
         id: user.id,
