@@ -52,8 +52,13 @@ export default function UserList() {
             </Flex>
 
             { isLoading ? (
-              <Flex justify="center">
-                <Spinner />
+              <Flex align="center" justify="center">
+                <Spinner 
+                  thickness="4px"
+                  emptyColor="gray.200"
+                  color="purple.500"
+                  size="xl"
+                />
               </Flex>
             ) : error ? (
               <Flex justify="center">
